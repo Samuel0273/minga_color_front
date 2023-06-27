@@ -15,7 +15,7 @@ export default function Footer() {
           <img className="mr-2" src="/src/assets/img/vimeo-black.png" alt="Vimeo" />
           <img src="/src/assets/img/youtube-black.png" alt="Youtube" />
         </div>
-        <button className="text-white mt-2	rounded-lg p-1 bg-gradient-to-r from-[#F9A8D4] to-[#F472B6]">Donate</button>
+        <button className="text-white mt-2	rounded-lg p-1 bg-gradient-to-r from-[#F9A8D4] to-[#F472B6]">Donate🤍</button>
       </div>
     </div>
   </footer>
