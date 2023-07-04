@@ -19,11 +19,9 @@ export default function NavBar() {
   <img onClick={()=>setDisplay(!display)} src="/src/assets/img/icon-exit.png"></img>
   </div>
   <div className="flex flex-col justify-center items-center gap-2">
-  <button className="text-white text-xl hover:bg-white hover:text-[#F472B6] w-72 h-9 rounded-lg p-2 flex justify-center items-center lg:text-2xl">Home</button>
-  <button className="text-white text-xl hover:bg-white hover:text-[#F472B6] w-72 h-9 rounded-lg p-2 flex justify-center items-center lg:text-2xl">Mangas</button>
-  <button className="text-white text-xl hover:bg-white hover:text-[#F472B6] w-72 h-9 rounded-lg p-2 flex justify-center items-center lg:text-2xl">My Mangas</button>
-  <button className="text-white text-xl hover:bg-white hover:text-[#F472B6] w-72 h-9 rounded-lg p-2 flex justify-center items-center lg:text-2xl">Favorites</button>
-  <button className="text-white text-xl hover:bg-white hover:text-[#F472B6] w-72 h-9 rounded-lg p-2 flex justify-center items-center lg:text-2xl">Logout</button>
+  <button  className="text-white text-xl hover:bg-white hover:text-[#F472B6] w-72 h-9 rounded-lg p-2 flex justify-center items-center lg:text-2xl">Home</button>
+  <button className="text-white text-xl hover:bg-white hover:text-[#F472B6] w-72 h-9 rounded-lg p-2 flex justify-center items-center lg:text-2xl">Register</button>
+  <button className="text-white text-xl hover:bg-white hover:text-[#F472B6] w-72 h-9 rounded-lg p-2 flex justify-center items-center lg:text-2xl">Sign In</button>
   </div>
 </div>): null}
 </>
