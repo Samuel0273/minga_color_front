@@ -1,12 +1,17 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import App from "../App";
+import Main from "../layouts/Main";
 import NotAllow from "../pages/NotAllow";
+import Index from "../pages";
 
 const router = createBrowserRouter([
     {
+        path: "/",
+        element: <Main/>,
+        children:[
+    {
         path: "/home",
-        element: <App/>
+        element: <Index/>
     },
     {
         path: "*",
@@ -15,6 +20,8 @@ const router = createBrowserRouter([
     {
         path: "/login"
     }
+]
+}
 ])
 
 export default router
