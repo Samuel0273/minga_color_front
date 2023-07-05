@@ -9,7 +9,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Main/>,
-        children:[
+        children:[ //te hace una red y te toma lo que tiene abajo
     {
         path: "/",
         element: <Index/>
