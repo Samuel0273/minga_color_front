@@ -1,5 +1,5 @@
 import Main from './layouts/Main'
-import Index from './pages'
+import Index from './pages/Index'
 import './index.css'
 
 function App() {

@@ -2,7 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Main from "../layouts/Main";
 import NotAllow from "../pages/NotAllow";
-import Index from "../pages";
+import Index from "../pages/Index";
+import SignIn from "../pages/SignIn";
 
 const router = createBrowserRouter([
     {
@@ -10,7 +11,7 @@ const router = createBrowserRouter([
         element: <Main/>,
         children:[
     {
-        path: "/home",
+        path: "/",
         element: <Index/>
     },
     {
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
         element: <NotAllow/>
     },
     {
-        path: "/login"
+        path: "/signin",
+        element: <SignIn/>
     }
 ]
 }
