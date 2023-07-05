@@ -2,7 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Main from "../layouts/Main";
 import NotAllow from "../pages/NotAllow";
-import Index from "../pages/Index";
+import Index from "../pages";
+import Register from "../pages/Register";
 import SignIn from "../pages/SignIn";
 import MangaFormContainer from "../pages/MangaForm"
 
@@ -10,7 +11,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Main/>,
-        children:[
+        children:[ //te hace una red y te toma lo que tiene abajo
     {
         path: "/",
         element: <Index/>
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
     {
         path: "*",
         element: <NotAllow/>
+    },
+    {
+        path: "/register",
+        element: <Register/>
     },
     {
         path: "/signin",
