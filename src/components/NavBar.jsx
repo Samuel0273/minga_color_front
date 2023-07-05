@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link as Anchor, useNavigate } from 'react-router-dom';
 import { api, apiUrl, endpoints } from '../utils/api';
 
@@ -12,7 +12,7 @@ export default function NavBar() {
     const token = localStorage.getItem('token');
     const user = localStorage.getItem('user');
     const photo = localStorage.getItem('photo');
-    return token && user;
+    return token && user && photo;
   };
 
   const signout = async () => {
