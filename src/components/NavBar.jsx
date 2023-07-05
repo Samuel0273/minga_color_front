@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function NavBar() {
   const [display,setDisplay] = useState(false)
@@ -20,7 +21,7 @@ export default function NavBar() {
   </div>
   <div className="flex flex-col justify-center items-center gap-2">
   <button  className="text-white text-xl hover:bg-white hover:text-[#F472B6] w-72 h-9 rounded-lg p-2 flex justify-center items-center lg:text-2xl">Home</button>
-  <button className="text-white text-xl hover:bg-white hover:text-[#F472B6] w-72 h-9 rounded-lg p-2 flex justify-center items-center lg:text-2xl">Register</button>
+  <Link to={"/register"} className="text-white text-xl hover:bg-white hover:text-[#F472B6] w-72 h-9 rounded-lg p-2 flex justify-center items-center lg:text-2xl">Register</Link>
   <button className="text-white text-xl hover:bg-white hover:text-[#F472B6] w-72 h-9 rounded-lg p-2 flex justify-center items-center lg:text-2xl">Sign In</button>
   </div>
 </div>): null}

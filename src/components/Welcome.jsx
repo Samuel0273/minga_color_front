@@ -6,7 +6,7 @@ export default function Welcome() {
     <h2 className="font-bold text-4xl mb-1 text-center md:text-left md:text-2xl xl:text-6xl lg:text-4xl">Live the emotion of the manga</h2>
     <p className="text-2xl mb-1 text-center md:text-xl lg:text-2xl">Find the perfect manga for you</p>
     <p className="text-2xl hidden font-bold mb-2 md:flex md:text-lg lg:text-3xl">#MingaForever❤️</p>
-    <Button to="/login"/>
+    <Button name={"Welcome"} to="/register"/>
   </div>
   )
 }
