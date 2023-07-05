@@ -6,4 +6,6 @@ export const endpoints = {
     read_chapters: "chapters/",
     signin : "auth/signin",
     signout : "auth/signout",
+    create_mangas: "mangas/create/",
+    read_categories: "categories/",
 }

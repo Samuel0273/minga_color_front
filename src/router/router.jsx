@@ -4,6 +4,7 @@ import Main from "../layouts/Main";
 import NotAllow from "../pages/NotAllow";
 import Index from "../pages/Index";
 import SignIn from "../pages/SignIn";
+import MangaFormContainer from "../pages/MangaForm"
 
 const router = createBrowserRouter([
     {
@@ -21,9 +22,12 @@ const router = createBrowserRouter([
     {
         path: "/signin",
         element: <SignIn/>
-    }
-]
-}
+    }]
+},
+{
+    path: "/manga-form",
+    element: <MangaFormContainer />,
+},
 ])
 
 export default router
