@@ -4,14 +4,15 @@ import Main from "../layouts/Main";
 import NotAllow from "../pages/NotAllow";
 import Index from "../pages";
 import Register from "../pages/Register";
+import SignIn from "../pages/SignIn";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main/>,
-        children:[
+        children:[ //te hace una red y te toma lo que tiene abajo
     {
-        path: "/home",
+        path: "/",
         element: <Index/>
     },
     {
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
         element: <Register/>
     },
     {
-        path: "/login"
+        path: "/signin",
+        element: <SignIn/>
     }
 ]
 }
