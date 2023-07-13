@@ -42,7 +42,7 @@ const router = createBrowserRouter([
     path: "/manga-form",
     element: <MangaFormContainer />,
   },
-
+]}
 ])
 
 export default router
