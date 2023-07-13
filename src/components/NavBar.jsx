@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link as Anchor, useNavigate } from 'react-router-dom';
 import { api, apiUrl, endpoints } from '../utils/api';
 
@@ -12,8 +12,15 @@ export default function NavBar() {
     const token = localStorage.getItem('token');
     const user = localStorage.getItem('user');
     const photo = localStorage.getItem('photo');
-    return token && user;
+    return token && user && photo;
   };
+
+  const isAuth = () => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    const role = user.role
+    
+    return (role === 1 || role === 2)
+  }
 
   const signout = async () => {
     const token = localStorage.getItem('token');
@@ -138,6 +145,15 @@ export default function NavBar() {
                 >
                   Favorites
                 </Anchor>
+                
+                {isAuth() &&
+                  (<Anchor
+                    to={'/manga-form'}
+                    className="p-3 hover:bg-white hover:text-[#F472B6] rounded-md w-[300px] text-white"
+                  >
+                    Upload Manga
+                  </Anchor>)
+                  }
                 <button
                   onClick={signout}
                   className="p-3 hover:bg-white hover:text-[#F472B6] rounded-md w-[300px] text-white">Log Out</button>
