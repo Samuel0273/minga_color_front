@@ -125,14 +125,20 @@ export default function NavBar() {
                   Home
                 </Anchor>
                 <Anchor
+                  to={'/mangas'}
                   className="p-3 hover:bg-white hover:text-[#F472B6] rounded-md w-[300px] text-white"
                 >
-                  Comics
+                  Mangas
                 </Anchor>
                 <Anchor
                   className="p-3 hover:bg-white hover:text-[#F472B6] rounded-md w-[300px] text-white"
                 >
-                  My Comics
+                  My Mangas
+                </Anchor>
+                <Anchor
+                  className="p-3 hover:bg-white hover:text-[#F472B6] rounded-md w-[300px] text-white"
+                >
+                  New Mangas
                 </Anchor>
                 <Anchor
                   className="p-3 hover:bg-white hover:text-[#F472B6] rounded-md w-[300px] text-white"
