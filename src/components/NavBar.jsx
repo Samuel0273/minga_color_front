@@ -52,7 +52,7 @@ export default function NavBar() {
           className="h-12 lg:h-14 flex text-[#F472B6] hover:bg-[#F472B6] hover:text-white rounded-lg"
           src="/src/assets/img/menu.png"
         />
-        <img className="h-12 lg:h-14" src="/src/assets/img/logo.png" />
+        <img className="hidden md:flex h-12 lg:h-14" src="/src/assets/img/logo.png" />
         <img className="md:hidden w-[35px] h-[35px] shrink-0" src="/src/assets/img/logo.png" />
       </nav>
       {display && (
@@ -118,14 +118,20 @@ export default function NavBar() {
                   Home
                 </Anchor>
                 <Anchor
+                  to={'/mangas'}
                   className="p-3 hover:bg-white hover:text-[#F472B6] rounded-md w-[300px] text-white"
                 >
-                  Comics
+                  Mangas
                 </Anchor>
                 <Anchor
                   className="p-3 hover:bg-white hover:text-[#F472B6] rounded-md w-[300px] text-white"
                 >
-                  My Comics
+                  My Mangas
+                </Anchor>
+                <Anchor
+                  className="p-3 hover:bg-white hover:text-[#F472B6] rounded-md w-[300px] text-white"
+                >
+                  New Mangas
                 </Anchor>
                 <Anchor
                   className="p-3 hover:bg-white hover:text-[#F472B6] rounded-md w-[300px] text-white"

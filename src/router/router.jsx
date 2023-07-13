@@ -4,6 +4,7 @@ import Main from "../layouts/Main";
 import NotAllow from "../pages/NotAllow";
 import Index from "../pages/Index";
 import SignIn from "../pages/SignIn";
+import Mangas from "../pages/Mangas"
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
     {
         path: "/signin",
         element: <SignIn/>
+    },
+    {   
+        path: "/mangas",
+        element: <Mangas/>
+
     }
 ]
 }

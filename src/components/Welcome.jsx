@@ -2,7 +2,7 @@ import Button from "./Button"
 
 export default function Welcome() {
   let anchortag = "/signin"
-  let titulo = "Lest Go"
+  let titulo = "Sign In !"
   if (localStorage.getItem("token") && localStorage.getItem("user")){
     anchortag = "/mangas" 
     titulo = "Explorer Mangas"
