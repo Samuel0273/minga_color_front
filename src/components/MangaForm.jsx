@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import {api, apiUrl, endpoints} from "../utils/api.js"
-import Swal from "sweetalert2"
+import swal from "sweetalert"
 
 export default function MangaForm() {
   const [selectedOption, setSelected] = useState("Select category");
@@ -34,14 +34,14 @@ export default function MangaForm() {
 
     try {
       await api.post(apiUrl + endpoints.create_mangas, data, configs);
-      Swal.fire({
+      swal.fire({
         icon: 'success',
         title: 'Manga uploaded successfully!',
       });
     } catch (error) {
       const er = error.response.data.message;
       console.log(error);
-      Swal.fire({
+      swal.fire({
         icon: 'error',
         title: er,
       });

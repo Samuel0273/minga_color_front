@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert';
+
 
 export default function Register() {
   const inputemail = useRef('');
@@ -49,11 +51,21 @@ export default function Register() {
       setPhoto('');
       setPassword('');
       setTermsAccepted(false);
-      alert('Successful registration');
+      Swal({
+        title: 'Successful registration',
+        text: 'Registration completed successfully!',
+        icon: 'success',
+        button: 'OK',
+      })
       console.log('Successful registration:', response.data);
     } catch (error) {
       console.error('Sign up failed:', error);
-      alert('Sign up failed');
+      Swal({
+        title: 'Failed registration',
+        text: 'Registration failed. Please try again.',
+        icon: 'error',
+        button: 'OK',
+      });
     }
   };
 

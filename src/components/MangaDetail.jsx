@@ -6,7 +6,7 @@ import { setManga, setChapters, setPagination } from "../redux/actions/manga.js"
 import { LS } from "../utils/localStorageUtils.js"
 
 const MangaDetail = () => {
-  const token = LS.get('token');
+  const token = LS.get2('token');
   console.log('token >>>', token)
   const { id } = useParams();
   const dispatch = useDispatch();

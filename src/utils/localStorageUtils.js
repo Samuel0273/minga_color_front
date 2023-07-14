@@ -1,5 +1,8 @@
 export const LS = {
   get: function (key) {
+    return JSON.parse(localStorage.getItem(key));
+  },
+  get2: function (key) {
     return localStorage.getItem(key);
   },
   remove: function (key) {
