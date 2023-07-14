@@ -31,7 +31,7 @@ export default function NavBar() {
   };
 
   const handleMouseLeave = (e) => {
-    if (!navbarRef.current.contains(e.target) && !menuRef.current.contains(e.target)) {
+    if (!navbarRef.current?.contains(e.target) && !menuRef.current.contains(e.target)) {
       setDisplay(false);
     }
   };
