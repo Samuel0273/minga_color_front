@@ -8,6 +8,11 @@ import Page from "../pages/Page";
 import ProtectedRouteUser from "./protectedUser";
 import ProtectedRouteNotUser from "./protectedNotUser";
 
+import Mangas from "../pages/Mangas"
+
+import MangaFormContainer from "../pages/MangaForm"
+
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -39,9 +44,17 @@ const router = createBrowserRouter([
         <ProtectedRouteNotUser>
             <Page/>
         </ProtectedRouteNotUser>
-    }
-]
-}
+    },
+    {   
+        path: "/mangas",
+        element: <Mangas/>
+
+    },
+  {
+    path: "/manga-form",
+    element: <MangaFormContainer />,
+  },
+]}
 ])
 
 export default router
