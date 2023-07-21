@@ -125,6 +125,18 @@ export default function NavBar() {
                   Home
                 </Anchor>
                 <Anchor
+                  to={'/admin'}
+                  className="p-3 hover:bg-white hover:text-[#F472B6] rounded-md w-[300px] text-white"
+                >
+                  Admin Panel
+                </Anchor>
+                <Anchor
+                  to={'/newrol'}
+                  className="p-3 hover:bg-white hover:text-[#F472B6] rounded-md w-[300px] text-white"
+                >
+                  New Rol
+                </Anchor>
+                <Anchor
                   to={'/mangas'}
                   className="p-3 hover:bg-white hover:text-[#F472B6] rounded-md w-[300px] text-white"
                 >

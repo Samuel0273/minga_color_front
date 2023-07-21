@@ -7,6 +7,8 @@ import SignIn from "../pages/SignIn";
 import Page from "../pages/Page";
 import ProtectedRouteUser from "./protectedUser";
 import ProtectedRouteNotUser from "./protectedNotUser";
+import AdminPanel from "../components/AdminPanel";
+import ProtectedRouteByRole from "../router/protecUserol";
 
 import Mangas from "../pages/Mangas"
 
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Main/>,
         children:[ //te hace una red y te toma lo que tiene abajo
+        {
+            path: "/",
+            element: <Index/>
+        },
     {
         path: "/home",
         element: <Index/>
@@ -47,13 +53,25 @@ const router = createBrowserRouter([
     },
     {   
         path: "/mangas",
-        element: <Mangas/>
+        element: 
+        <ProtectedRouteNotUser>
+            <Mangas/>
+        </ProtectedRouteNotUser>
 
     },
   {
     path: "/manga-form",
     element: <MangaFormContainer />,
   },
+  {
+    path: "/admin",
+    element:
+    <ProtectedRouteByRole allowedRoles={[3]}>
+     <AdminPanel />
+    </ProtectedRouteByRole >,
+
+  },
+  
 ]}
 ])
 
