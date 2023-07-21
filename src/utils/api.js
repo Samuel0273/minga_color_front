@@ -9,4 +9,6 @@ export const endpoints = {
     signout : "auth/signout",
     create_mangas: "mangas/create/",
     read_categories: "categories/",
+    fetchAuthorsAdmin: "authors/admin",
+    changeUserRoleToAuthor: "auth/role/author/:id",
 }
