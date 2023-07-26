@@ -1,3 +1,5 @@
+import { Link as Anchor, useNavigate } from 'react-router-dom';
+
 export default function Footer() {
   return (
     <footer className="flex flex-col w-full justify-between items-center pb-5 bg-[#EBEBEB]">
@@ -15,7 +17,7 @@ export default function Footer() {
           <img className="mr-2" src="/src/assets/img/vimeo-black.png" alt="Vimeo" />
           <img src="/src/assets/img/youtube-black.png" alt="Youtube" />
         </div>
-        <button className="text-white mt-2	rounded-lg p-1 bg-gradient-to-r from-[#F9A8D4] to-[#F472B6]">Donate🤍</button>
+        <Anchor to={'/donations'} className="text-white mt-2	rounded-lg p-1 bg-gradient-to-r from-[#F9A8D4] to-[#F472B6]">Donate🤍</Anchor>
       </div>
     </div>
   </footer>

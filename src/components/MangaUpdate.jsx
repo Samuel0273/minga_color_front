@@ -33,10 +33,7 @@ export default function MangaForm() {
     }
 
     try {
-      console.log('TOKN >>>', token)
-      console.log('DATA >>>', data)
-      console.log('CONF >>>', configs)
-      await api.post(apiUrl + "mangas/create", data, configs);
+      await api.update(apiUrl + "/create", data, configs);
       alert('success')
       //Swal.fire({
       //  icon: 'success',

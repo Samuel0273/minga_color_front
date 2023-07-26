@@ -1,12 +1,14 @@
 import React, { useRef } from 'react'
 import { api, apiUrl, endpoints } from '../utils/api'
 import { Link as Anchor , useNavigate } from 'react-router-dom'
+import { useDispatch } from "react-redux";
+import { setAuthId } from '../redux/actions/auth';
 
 export default function FormularioSignin() {
     let navigate = useNavigate()
     let inputEmail = useRef("")
     let inputPassword = useRef("")
-
+    const dispatch = useDispatch();
   const signin = async (event) => {
     event.preventDefault()
     let data = {
@@ -22,6 +24,8 @@ export default function FormularioSignin() {
         localStorage.setItem('token', response.data.response.token)
         localStorage.setItem('user', JSON.stringify(response.data.response.user))
         localStorage.setItem('photo', response.data.response.photo)
+        dispatch(setAuthId(response.data.response.author_id))
+        console.log('auth id >>>', response.data.response.author_id)
         navigate('/')
       } else {
         alert('Authentication failed!')
